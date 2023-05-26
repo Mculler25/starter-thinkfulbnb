@@ -39,6 +39,10 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+.group img {
+  width: 100%;
 }
 
 .item {
@@ -78,6 +82,22 @@ header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* -------  forms ---------- */
+#stay form div{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+#stay form div input, #stay form div select{
+  margin-right: 10px;
+}
+
 
 /* -------  Search Form ------- */
 form {
@@ -117,3 +137,113 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) and (max-width: 920px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .logo {
+    font-size: 38px;
+  }
+  #stay form{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+  #stay form div{
+    flex-direction: column;
+    width: 20%;
+  }
+  #stay form input, #stay form select, #stay form label {
+    width: 100%;
+    font-size: 60%;
+  }
+  #stay form div button {
+    width: 100%;
+    font-size: 18px;
+  }
+  .group{
+    flex-direction: row;
+  }
+  .about-img {
+    width: 25%;
+  }
+  #about-p{
+    width: 50%;
+    font-size: 12px;
+  }
+  #about div{
+    align-items: center;
+  }
+  #ideas .group div {
+    flex: 1;
+  }
+  #host div {
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+  }
+  #host div p, #host ul li {
+    font-size: 12px;
+  }
+  
+}
+@media all and (min-width: 921px){
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .logo {
+    font-size: 52px;
+  }
+  #menu {
+    font-size: 20px;
+  }
+  #stay form{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  #stay form div{
+    flex-direction: column;
+    width: 20%;
+  }
+  #stay form input, #stay form select, #stay form label {
+    width: 100%;
+    font-size: 80%;
+  }
+  #stay form div button {
+    width: 100%;
+
+  }
+  .group{
+    flex-direction: row;
+  }
+  .about-img {
+    width: 25%;
+  }
+  #about-p{
+    width: 50%;
+  }
+  #about div{
+    align-items: center;
+  }
+  #ideas .group div {
+    flex: 1;
+  }
+  #host div {
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+  } 
+}
+@media all and (max-width: 370px){
+  header .logo{
+    font-size: 34px;
+  }
+  #menu {
+    font-size: 14px;
+  }
+}
